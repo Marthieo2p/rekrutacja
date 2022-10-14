@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$primary-color: rgb(14, 85, 148);
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - CSS
+
+    Spróbuj zmodyfikować poniższy plik ze stylami tak, by upiększyć formularz na stronie.
+    Jako inspiracji możesz skorzystać z szablonu znajdującego się w pliku img/layout.png
+    Nie wymagamy, by wykonać identyczny layout. Liczy się kreatywność.
+
+    Przy wykonywaniu zadania można zmienić strukturę pliku index.html.
+    Pamiętaj, że w takim wypadku będzie trzeba zadbać o dostosowanie odpowiednich selektorów.
+
+    Jeśli korzystasz z preprocessorów takich jak Sass/Less, również możesz się tym pochwalić.
+
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("/myStyle/src/bg2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#task-frontend {
+  max-height: 50vh;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 8%;
+  padding: 20% 8%;
+  background-color: white;
+  background: rgba(200, 240, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(200, 240, 255, 0.3);
+
+}
+
+#task-frontend .basic-title {
+  color: $primary-color;
+    font-size: 35px;
+}
+
+#task-frontend .form-line {
+  border: 0px solid blue;
+}
+
+#task-frontend form > label {
+  text-transform: uppercase;
+  margin: 10px auto 0 auto;
+}
+
+#task-frontend input[type="text"],
+#task-frontend input[type="email"] {
+  display: block;
+  margin: 10px auto;
+  border: 1px solid black;
+  width: 250px;
+  height: 30px;
+}
+
+#task-frontend span {
+  display: block;
+}
+
+#task-frontend input[type="checkbox"] {
+  border: 1px solid red;
+  text-transform: none;
+}
+
+#task-frontend input[type="submit"] {
+  color: lightgrey;
+  background-color: $primary-color;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+
+}
