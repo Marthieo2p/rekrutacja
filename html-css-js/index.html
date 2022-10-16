@@ -39,29 +39,37 @@
 
 			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
 
-			<label for="first-name">Imię</label>
-		    <input type="text" id="first-name"/>
+		    <input type="text" id="first-name" placeholder="imię"/>
 
-            <label for="last-name">Nazwisko</label>
-		    <input type="text" id="last-name"/>
+		    <input type="text" id="last-name" placeholder="nazwisko"/>
 
-			<label for="email">Email</label>
-		    <input type="email" id="email"/>
+		    <input type="email" id="email" placeholder="email"/>
 
 			<span>Sekcje, które Cię interesują:</span>
+        <div class="checkboxes">
+            <div class="div">
             <input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
             <label for="frontend-checkbox">Frontend</label>
+        </div>
+            <div class="div">
+
             <input type="checkbox" id="backend-checkbox" name="section" value="frontend">
             <label for="backend-checkbox">Backend</label>
+        </div>
+            <div class="div">
+
             <input type="checkbox" id="mobile-checkbox" name="section" value="frontend">
             <label for="mobile-checkbox">Mobile</label>
+        </div>
+            <div class="div">
+
             <input type="checkbox" id="graphics-checkbox" name="section" value="frontend">
             <label for="graphics-checkbox">Grafika</label>
-
+        </div>
+        </div>
             <input type="submit" value="Prześlij">
 		</form>
 
-		<hr class="form-line"></hr>
 
 	</section>
 	<!-- koniec formularza -->

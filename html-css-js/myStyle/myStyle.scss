@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap");
 $primary-color: rgb(14, 85, 148);
+$second-color: lightgrey;
 /*
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     AKAI Frontend Task - CSS
@@ -24,19 +25,18 @@ $primary-color: rgb(14, 85, 148);
 }
 body {
   font-family: "Open Sans", sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-image: url("/myStyle/src/bg2.png");
+  background-image: url("/myStyle/src/bg3.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #task-frontend {
-  max-height: 50vh;
-  max-width: 650px;
+  max-height: 62vh;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -52,48 +52,103 @@ body {
   backdrop-filter: blur(6.1px);
   -webkit-backdrop-filter: blur(6.1px);
   border: 1px solid rgba(200, 240, 255, 0.3);
-
 }
 
 #task-frontend .basic-title {
+  padding-bottom: 10px;
   color: $primary-color;
-    font-size: 35px;
+  font-size: 30px;
 }
-
-#task-frontend .form-line {
-  border: 0px solid blue;
-}
-
+#task-frontend form {
+    width: 80%;
+    height: 100vh;
+  }
 #task-frontend form > label {
-  text-transform: uppercase;
-  margin: 10px auto 0 auto;
+  text-transform: lowercase;
+  margin: 10px auto;
 }
-
+#task-frontend input::placeholder {
+  padding: 5px 20px;
+  font-family: "Roboto Mono", monospace;
+}
 #task-frontend input[type="text"],
 #task-frontend input[type="email"] {
   display: block;
-  margin: 10px auto;
-  border: 1px solid black;
-  width: 250px;
-  height: 30px;
+  color: $primary-color;
+  font-size: 12px;
+  margin: 4% auto;
+  padding: 5px 20px;
+  width: 75%;
+  height: 35px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 5px 7px 6px -6px #5a5a5a90 inset;
 }
 
 #task-frontend span {
+  color: $primary-color;
   display: block;
+  margin-top: 15%;
 }
 
-#task-frontend input[type="checkbox"] {
-  border: 1px solid red;
-  text-transform: none;
-}
 
 #task-frontend input[type="submit"] {
   color: lightgrey;
+  font-size: 15px;
   background-color: $primary-color;
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 32px;
+  margin-bottom: 15%;
   text-align: center;
   border: none;
-  border-radius: 15px;
-
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px -2px #4c4c4c90;
+  transition: 0.5s;
+}
+#task-frontend input[type="submit"]:hover{
+    box-shadow: 1px 1px 8px -2px #4c4c4c90;
+    cursor: pointer;
+    border: 2px solid $primary-color;
+    background-color: transparent;
+    color: white;
+}
+#task-frontend .checkboxes {
+  text-transform: lowercase;
+  color: $primary-color;
+  margin: 8% auto;
+  padding-bottom: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10%;
+  align-content: center;
+}
+#task-frontend .checkboxes div {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: center;
+    justify-content: start;
+  }
+  #task-frontend .checkboxes div label {
+    padding-left: 5px;
+  }
+@media screen and (min-width: 650px) {
+  #task-frontend {
+    max-height: 68%;
+    max-width: 60%;
+  }
+  #task-frontend input[type="text"],
+  #task-frontend input[type="email"] {
+    font-size: 15px;
+  }
+  #task-frontend .basic-title {
+    font-size: 35px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 850px) {
+  #task-frontend {
+    max-height: 72%;
+  }
 }
