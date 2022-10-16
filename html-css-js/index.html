@@ -35,15 +35,15 @@
 
 		<hr class="form-line"></hr>
 
-		<form method="POST">
+		<form method="POST" name="myForm" onsubmit="return valideForm()">
 
 			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
 
-		    <input type="text" id="first-name" placeholder="imię"/>
+		    <input type="text" id="first-name" name="firstName" placeholder="imię"/>
 
-		    <input type="text" id="last-name" placeholder="nazwisko"/>
+		    <input type="text" id="last-name" name="lastName" placeholder="nazwisko"/>
 
-		    <input type="email" id="email" placeholder="email"/>
+		    <input type="email" id="email" name="email" placeholder="email"/>
 
 			<span>Sekcje, które Cię interesują:</span>
         <div class="checkboxes">
@@ -67,7 +67,7 @@
             <label for="graphics-checkbox">Grafika</label>
         </div>
         </div>
-            <input type="submit" value="Prześlij">
+            <input type="submit" value="Prześlij" class="submitBtn">
 		</form>
 
 

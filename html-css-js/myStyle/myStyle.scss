@@ -56,13 +56,14 @@ body {
 
 #task-frontend .basic-title {
   padding-bottom: 10px;
-  color: $primary-color;
+  color: rgb(15, 79, 122);
   font-size: 30px;
+  font-weight: 600;
 }
 #task-frontend form {
-    width: 80%;
-    height: 100vh;
-  }
+  width: 80%;
+  height: 100vh;
+}
 #task-frontend form > label {
   text-transform: lowercase;
   margin: 10px auto;
@@ -91,7 +92,6 @@ body {
   margin-top: 15%;
 }
 
-
 #task-frontend input[type="submit"] {
   color: lightgrey;
   font-size: 15px;
@@ -105,12 +105,12 @@ body {
   box-shadow: 3px 3px 10px -2px #4c4c4c90;
   transition: 0.5s;
 }
-#task-frontend input[type="submit"]:hover{
-    box-shadow: 1px 1px 8px -2px #4c4c4c90;
-    cursor: pointer;
-    border: 2px solid $primary-color;
-    background-color: transparent;
-    color: white;
+#task-frontend input[type="submit"]:hover {
+  box-shadow: 1px 1px 8px -2px #4c4c4c90;
+  cursor: pointer;
+  border: 2px solid $primary-color;
+  background-color: transparent;
+  color: white;
 }
 #task-frontend .checkboxes {
   text-transform: lowercase;
@@ -121,18 +121,24 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10%;
-  align-content: center;
 }
 #task-frontend .checkboxes div {
-    min-width: 100%;
-    display: grid;
-    grid-template-columns: min-content auto;
-    align-items: center;
-    justify-content: start;
-  }
-  #task-frontend .checkboxes div label {
-    padding-left: 5px;
-  }
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+  justify-content: start;
+}
+#task-frontend .checkboxes div label {
+  padding-left: 5px;
+}
+#task-frontend .checkboxes div input {
+  box-shadow: 4px 5px 6px -5px #5a5a5a90;
+}
+#task-frontend .checkboxes .div input[type="checkbox"]:checked {
+  box-shadow: 4px 5px 6px -5px #5a5a5a90;
+  background-color: $primary-color;
+}
 @media screen and (min-width: 650px) {
   #task-frontend {
     max-height: 68%;
