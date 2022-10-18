@@ -1,3 +1,4 @@
+import { pokemons } from "./data.js";
 /*
   1. W pliku data.js pod zmienna "pokemons" znajduje się tablica zawierająca dane wielu pokemonów, masz do niej dostęp również w tym pliku. 
   Chciałbym, abyś użył jej do wyświetlenia wszystkich pokemonów w naszym Pokedexie. 
@@ -9,10 +10,21 @@ const pokemonsContainer = document.querySelector(".pokemons");
 
 function renderPokemons(pokemons) {
   // uzupełnij tutaj
-}
+  pokemons.forEach(pokemon => {
+    const newPok = document.createElement("div");
+    const newPokName = document.createElement("h1");
+    newPok.setAttribute("class", `card ${pokemon.id}`);
+    newPokName.setAttribute("class", `card-name ${pokemon.id}`);
+    newPokName.textContent = pokemon.name;
 
+    newPok.appendChild(newPokName);
+    pokemonsContainer.appendChild(newPok);
+
+  });
+}
 // następnie wykonaj uzupełnioną metodę z tablicą pokemons, aby sprawdzić czy wszystko działa
-// renderPokemons(pokemons);
+console.log(pokemons);
+renderPokemons(pokemons);
 
 /*
   2. Przeglądanie całej listy pokemonów może okazać się trochę uciążliwe. Fajnie byłoby skorzystać z filtrów, które już znajdują sie w pliku html. 

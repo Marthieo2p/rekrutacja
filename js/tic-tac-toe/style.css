@@ -53,3 +53,19 @@ body {
   line-height: 1;
   color: teal;
 }
+.reset{
+    border: 3px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(95, 95, 95);
+    color: azure;
+    transition: 0.2s;
+}
+.reset:hover{
+    color: black;
+    cursor: pointer;
+    background-color: #fff;
+    transform: scale(1.1);
+}

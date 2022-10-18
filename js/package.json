@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "js",
+  "version": "1.0.0",
+  "description": "W tym przypadku ze względu na nieco większą ilość czasu potrzebnego do wypełnienia tych zadań wymagamy zrobienia ich tylko dwóch z trzech, choć oczywiście nic nie stoi na przeszkodzie, abyś zrobił je wszystkie :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
