@@ -1,5 +1,6 @@
 body {
-  font-family: "Cute Font", cursive;
+  font-family: "Comfortaa", cursive;
+  background-color: #525e75;
 }
 
 .wrapper {
@@ -21,18 +22,19 @@ body {
 .turn {
   font-size: 45px;
   text-align: center;
+  color: #f1ddbf;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
   width: 450px;
-  border: 5px solid black;
+  border: 2px solid #f1ddbf;
 }
 
 .tile {
   box-sizing: border-box;
-  border: 5px solid black;
+  border: 2px solid #f1ddbf;
   width: 150px;
   height: 150px;
   display: flex;
@@ -41,31 +43,36 @@ body {
 }
 
 .tile-x:before {
-  font-size: 200px;
+  font-size: 8rem;
   content: "X";
-  line-height: 1;
-  color: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2546a;
 }
 
 .tile-o:before {
-  font-size: 200px;
+  font-size: 8rem;
   content: "O";
-  line-height: 1;
-  color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #92ba92;
 }
-.reset{
-    border: 3px black solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(95, 95, 95);
-    color: azure;
-    transition: 0.2s;
+.reset {
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #f1ddbf;
+  color: #78938a;
+  transition: 0.2s;
 }
-.reset:hover{
-    color: black;
-    cursor: pointer;
-    background-color: #fff;
-    transform: scale(1.1);
+.reset:hover {
+  color: #525e75;
+  cursor: pointer;
+  background-color: #fff;
+  transform: scale(1.1);
 }
